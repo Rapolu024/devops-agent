@@ -1,0 +1,38 @@
+{
+  "logging_level": "INFO",
+  "max_analysis_time": 3600,
+  "supported_languages": ["python", "javascript", "typescript", "java", "go", "rust", "php", "ruby"],
+  "cloud_providers": ["aws", "gcp", "azure"],
+  "default_cloud": "aws",
+  "monitoring_interval": 60,
+  "auto_scale": true,
+  "auto_heal": true,
+  "security_scan": true,
+  "thresholds": {
+    "cpu_scale_up": 80.0,
+    "cpu_scale_down": 30.0,
+    "memory_scale_up": 85.0,
+    "memory_scale_down": 40.0,
+    "disk_usage": 90.0,
+    "response_time": 2.0,
+    "error_rate": 5.0
+  },
+  "cloud_credentials": {
+    "aws": {
+      "region": "us-west-2",
+      "profile": "default"
+    },
+    "gcp": {
+      "project_id": "your-project-id",
+      "region": "us-central1"
+    },
+    "azure": {
+      "subscription_id": "your-subscription-id",
+      "resource_group": "devops-agent-rg"
+    }
+  },
+  "notification_channels": {
+    "email": "admin@company.com",
+    "slack_webhook": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK"
+  }
+}
